@@ -14,6 +14,7 @@
 		82BD757228EF56DB001B6BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82BD757028EF56DB001B6BCA /* Main.storyboard */; };
 		82BD757428EF56DB001B6BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82BD757328EF56DB001B6BCA /* Assets.xcassets */; };
 		82BD757728EF56DB001B6BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82BD757528EF56DB001B6BCA /* LaunchScreen.storyboard */; };
+		82C2ACA428F1720F00C5D00C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 82C2ACA328F1720F00C5D00C /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		82BD757128EF56DB001B6BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82BD757328EF56DB001B6BCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82BD757628EF56DB001B6BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82C2ACA328F1720F00C5D00C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		82BD755E28EF56DA001B6BCA = {
 			isa = PBXGroup;
 			children = (
+				82C2ACA328F1720F00C5D00C /* LICENSE */,
 				82663A9728F14A0E008A9FAF /* .gitignore */,
 				82663A9928F16997008A9FAF /* README.md */,
 				82BD756928EF56DB001B6BCA /* SCNRendererExample */,
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C2ACA428F1720F00C5D00C /* LICENSE in Resources */,
 				82663A9828F14A0E008A9FAF /* .gitignore in Resources */,
 				82BD756D28EF56DB001B6BCA /* art.scnassets in Resources */,
 				82BD757728EF56DB001B6BCA /* LaunchScreen.storyboard in Resources */,
