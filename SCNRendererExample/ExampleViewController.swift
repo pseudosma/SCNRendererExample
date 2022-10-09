@@ -6,8 +6,7 @@ class ExampleViewController: UIViewController {
     @IBOutlet var mtkView: MTKView!
     
     var fpsScalar: Double = 0
-    var commandQueue: MTLCommandQueue!
-    var renderer: SCNRenderer!
+    var renderer: SCNRenderer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,12 +57,9 @@ class ExampleViewController: UIViewController {
 
         //setup renderer
         renderer = SCNRenderer(device: device, options: nil)
-        renderer.scene = scn
-        renderer.pointOfView = cameraNode
-        renderer.delegate = self
-        
-        //setup command queue
-        commandQueue = device.makeCommandQueue()
+        renderer!.scene = scn
+        renderer!.pointOfView = cameraNode
+        renderer!.delegate = self
     }
 }
 
@@ -80,11 +76,11 @@ extension ExampleViewController: MTKViewDelegate {
     }
     
     func draw(in view: MTKView) {
-        if let renderPassDescriptor = view.currentRenderPassDescriptor, let drawable = view.currentDrawable {
+        if let r = renderer, let renderPassDescriptor = view.currentRenderPassDescriptor, let drawable = view.currentDrawable, let commandQueue = r.commandQueue {
             let commandBuffer = commandQueue.makeCommandBuffer()
             
-            renderer.render(
-                atTime: renderer.sceneTime,
+            r.render(
+                atTime: r.sceneTime,
                 viewport: CGRect(origin: CGPointZero, size: CGSize(width: drawable.texture.width, height: drawable.texture.height)),
                 commandBuffer: commandBuffer!,
                 passDescriptor: renderPassDescriptor
